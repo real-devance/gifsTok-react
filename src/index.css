@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Default text color for light mode, and inverse for dark mode */
+    .text-default {
+      @apply text-black dark:text-white;
+    }
+
+    /* Inverse text color (white for light mode, black for dark mode) */
+    .text-default-inverse {
+      @apply text-white dark:text-black;
+    }
+
+    /* Default icon color for light mode, and inverse for dark mode */
+    .icon {
+      @apply text-black dark:text-white;
+    }
+
+    /* Inverse icon color (white for light mode, black for dark mode) */
+    .icon-inverse {
+      @apply text-white dark:text-black;
+    }
+
+    /* Default background color (light gray for light mode, dark gray for dark mode) */
+    .bg-default {
+      @apply bg-zinc-100 dark:bg-zinc-950;
+    }
+
+    /* Inverse background color (dark gray for light mode, light gray for dark mode) */
+    .bg-default-inverse {
+      @apply bg-zinc-950 dark:bg-zinc-100;
+    }
+
+    /* Default border color (gray border) */
+    .border-default {
+      @apply border border-slate-400;
+    }
+}
+
+body {
+  /* Set default font family */
+  font-family: "Fira Sans", serif;
+}
