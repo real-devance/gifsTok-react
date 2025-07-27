@@ -32,7 +32,7 @@ const getSearchGifs = async (query: string, pageParam: string = ""): Promise<{ r
 // Fetches trending GIFs with pagination support
 const getTrendingGifs = async (pageParam: string = ""): Promise<{ results: any[]; next: string | null }> => {
   try {
-    const response = await axios.get(`/api/getTrendingGifs?pageParam=${pageParam}`, {
+    const response = await axios.get(`${BASE_URL}/getTrendingGifs`, {
       params: {
 
         pos: pageParam, // Pagination position (page offset)
@@ -50,9 +50,6 @@ const getTrendingGifs = async (pageParam: string = ""): Promise<{ results: any[]
     throw error; // Throw error to let caller handle it
   }
 };
-
-
-
 
 
 export { getTrendingGifs, getSearchGifs };
