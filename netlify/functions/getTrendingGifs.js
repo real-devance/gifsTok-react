@@ -50,8 +50,6 @@ export async function handler(event) {
     };
   } catch (error) {
     // Return an error response if the API request fails
-    console.error('Error fetching from Tenor API:', error.message); // Log the error
-
     return {
       statusCode: error.response?.status || 500,
       headers,
